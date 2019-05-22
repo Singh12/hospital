@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="row">
+            <div class="col-md-7 order-md-5">
+                <div class="card">
+                    <div class="card-header">
+                      Hospital List
+                    </div>
+                    <div class="card-body">
+                      <button class="btn btn-primary mb-2 mr-2" (click) = "shortArray()">
+                        Sort by Department name
+                      </button>
+                      <button class="btn btn-primary mb-2" routerLink = "/">
+                           Back
+                          </button>
+                      <table class="table">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">Department Name</th>
+                              <th scope="col">Head Of Department</th>
+                              <th scope="col">Contact Number</th>
+                            </tr>
+                          </thead>
+                          <tbody *ngFor="let hospital of hospitalList">
+                            <tr>
+                              <th scope="row">{{hospital.departmentname}}</th>
+                              <th scope="row">{{hospital.head}}</th>
+                              <th scope="row">{{hospital.contactnumber}}</th>
+                            </tr>
+                          </tbody>
+                        </table>
+                    </div>
+                  </div>
+              </div>
+        </div>
+      </div>
+      

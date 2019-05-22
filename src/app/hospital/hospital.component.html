@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-7 order-md-5">
+          <div class="card">
+              <div class="card-header">
+                Hospital List
+              </div>
+              <div class="card-body">
+                <button class="btn btn-primary mb-2" (click) = "shortArray()">
+                  Sort by hospital name
+                </button>
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Department Name</th>
+                        <th scope="col">Contact Number</th>
+                        <th scope="col">View Department</th>
+                      </tr>
+                    </thead>
+                    <tbody *ngFor="let hospital of hospitals">
+                      <tr>
+                        <th scope="row">{{hospital.hospitalname}}</th>
+                        <th scope="row">{{hospital.contactnumber}}</th>
+                        <th scope="row"><a (click)="showView(hospital.hospitalname)" style="cursor:pointer; color:blue;">View</a></th>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
